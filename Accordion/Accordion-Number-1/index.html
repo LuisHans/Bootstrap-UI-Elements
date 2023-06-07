@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordion</title>
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #4e5e6c;
+      }
+      .mx-auto.pb-5,
+      #accordionExample {
+        max-width: 90%;
+        margin: 0 auto;
+        --bs-accordion-border-radius: 0;
+        --bs-accordion-inner-border-radius: 0;
+      }
+      @media (min-width: 768px) {
+        .mx-auto.pb-5,
+        #accordionExample {
+          max-width: 500px;
+        }
+      }
+      .accordion-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5)!important;
+      }
+      .accordion-button {
+        background-color: #1c2938;
+        border: none!important;
+      }
+      .accordion-button::after {
+        display: none;
+      }
+      .accordion-button:focus {
+        z-index: 3;
+        border-color: none;
+        outline: 0;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #1c2938;
+      }
+      .accordion-body {
+        background-color: #253447;
+      }
+      </style>
+</head>
+
+<body class="text-white">
+  <div class="container pb-5">
+    <div class="mx-auto pb-5 pt-5">
+      <h1 class="text-center">Accordion #1</h1>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+          <button class="accordion-button text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Description
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body text-white">
+            <strong>This is description accordion body.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem expedita, nisi illum excepturi facere consectetur fuga repellat necessitatibus possimus doloribus labore inventore distinctio voluptatum eveniet eos debitis ipsum iste. Tempore?
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+          <button class="accordion-button text-white collapsed border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Details
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body text-white">
+            <strong>This is the details accordion body.</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi iusto quisquam adipisci fuga quam explicabo commodi, nostrum praesentium accusamus molestias? Voluptatum quisquam quos illum molestias nemo reiciendis recusandae nihil quod.
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+          <button class="accordion-button text-white collapsed border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Review and ratings
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body text-white">
+            <strong>This is the Review and ratings accordion body.</strong> It is Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ex pariatur unde officiis nemo quaerat provident, veritatis quis iusto, dolore nesciunt soluta culpa, temporibus delectus facere. Minus autem ipsum ex?
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
